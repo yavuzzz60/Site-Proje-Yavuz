@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #222;
+  --red: #c40505;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  height: 70px;
+  padding: 0 40px;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.logo img { height: 60px; }
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: var(--red);
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+/* HERO */
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.hero-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; }
+}
+
+.alt-yazi {
+  margin-top: 5px;
+  color: #666;
+}
+
+/* SEARCH */
+.search-form {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.search-form select,
+.search-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.search-btn {
+  background: rgba(196,5,5,0.9);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(196,5,5,0.6);
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  box-shadow: 0 0 35px rgba(196,5,5,0.9);
+  transform: translateY(-2px);
+}
+
+/* REZERVASYON ÖZET */
+.rez-ozet {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+#rez:checked ~ .rez-ozet {
+  display: block;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup:target { display: flex; }
+
+.popup-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  animation: fade 0.4s ease;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.features span {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.05);
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* REZERVASYON */
+.rez-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: var(--red);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.rez-ok {
+  display: none;
+  margin-top: 10px;
+  color: #1fa463;
+  font-weight: bold;
+}
+
+#rez:checked ~ .rez-ok {
+  display: block;
+}
+
+/* CLOSE */
+.close-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #444;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  height: 60px;
+  background: #111;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}

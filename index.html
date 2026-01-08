@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reşadiye Mavi Canlar Turizm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="images/Mavi Canlar Logo.png" alt="Mavi Canlar">
+  </div>
+
+  <nav class="nav-links">
+    <a href="#">Anasayfa</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+</header>
+
+<main class="hero">
+  <div class="hero-card">
+
+    <h1>Güvenli ve Konforlu Yolculuk</h1>
+    <p class="alt-yazi">Reşadiye Mavi Canlar</p>
+
+    <!-- BİLET ARA -->
+    <div class="search-form">
+      <select>
+        <option>Kalkış</option>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>Tokat (Reşadiye)</option>
+      </select>
+
+      <select>
+        <option>Varış</option>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>Tokat (Reşadiye)</option>
+      </select>
+
+      <input type="date">
+      <input type="number" min="1" value="1">
+
+      <a href="#sefer" class="search-btn">Bilet Ara</a>
+    </div>
+
+    <!-- REZERVASYON ÖZETİ -->
+    <input type="checkbox" id="rez" hidden>
+
+    <div class="rez-ozet">
+      <h3>Rezervasyonunuz</h3>
+      <p><strong>İstanbul → Tokat (Reşadiye)</strong></p>
+      <p>🕗 08:00 · ⏱ 12 Saat</p>
+      <p>🚌 Plaka: 60 ET 035</p>
+      <p class="price">1.300 ₺</p>
+    </div>
+
+  </div>
+</main>
+
+<!-- SEFER POPUP -->
+<div id="sefer" class="popup">
+  <div class="popup-card">
+
+    <h3>İstanbul → Tokat (Reşadiye)</h3>
+    <p>🕗 08:00</p>
+    <p>⏱ 12 Saat</p>
+    <p>🚌 Plaka: 60 ET 035</p>
+
+    <div class="features">
+      <span>2+1 Koltuk</span>
+      <span>Wi-Fi</span>
+      <span>Priz</span>
+      <span>İkram</span>
+    </div>
+
+    <p class="price">1.300 ₺</p>
+
+    <label for="rez" class="rez-btn">Rezervasyon Yap</label>
+    <p class="rez-ok">✅ Rezervasyon Yapıldı</p>
+
+    <a href="#" class="close-btn">Kapat</a>
+  </div>
+</div>
+
+<!-- HAKKIMIZDA -->
+<div id="hakkimizda" class="popup">
+  <div class="popup-card">
+    <h2>Hakkımızda</h2>
+    <p>
+      Reşadiye Mavi Canlar Turizm,
+      2+1 koltuk düzeni ve modern araçlarıyla
+      güvenli ve konforlu yolculuk sunar.
+    </p>
+    <a href="#" class="close-btn">Kapat</a>
+  </div>
+</div>
+
+<!-- İLETİŞİM -->
+<div id="iletisim" class="popup">
+  <div class="popup-card">
+    <h2>İletişim</h2>
+    <p>📞 123 456 78 90</p>
+    <p>✉️ info@mavicanlar.com</p>
+    <a href="#" class="close-btn">Kapat</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 Reşadiye Mavi Canlar Turizm
+</footer>
+
+</body>
+</html>
